@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MvcModel.Models.ArticleCommentView>
+
+@{
+    ViewBag.Title = "Join";
+}
+
+<h2>Join</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Body（@item.Title）</li>
+    }
+</ul>

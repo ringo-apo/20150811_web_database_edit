@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MvcModel.Models.ArticleHaving>
+
+@{
+    ViewBag.Title = "Having";
+}
+
+<h2>Having</h2>
+
+<ul>
+@foreach (var item in Model){
+    <li>@item.Category（@item.ViewAverage）</li>
+}
+</ul>

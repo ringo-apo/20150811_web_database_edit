@@ -1,0 +1,24 @@
+﻿@model MvcModel.Models.Comment
+
+@{
+    ViewBag.Title = "Navigation";
+}
+
+<h2>Navigation</h2>
+
+@{ var article = Model.Article; }
+
+@if(article != null) {
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => article.Title)</dt>
+        <dd>@Html.DisplayFor(model => article.Title)</dd>
+        <dt>@Html.DisplayNameFor(model => article.Category)</dt>
+        <dd>@Html.DisplayFor(model => article.Category)</dd>
+        <dt>@Html.DisplayNameFor(model => article.Description)</dt>
+        <dd>@Html.DisplayFor(model => article.Description)</dd>
+        <dt>@Html.DisplayNameFor(model => article.Published)</dt>
+        <dd>@Html.DisplayFor(model => article.Published)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Body)</dt>
+        <dd>@Html.DisplayFor(model => model.Body)</dd>        
+    </dl>
+}

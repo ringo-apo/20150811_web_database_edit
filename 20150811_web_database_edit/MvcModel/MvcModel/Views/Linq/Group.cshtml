@@ -1,0 +1,15 @@
+﻿@model IEnumerable<IGrouping<MvcModel.Models.CategoryEnum,MvcModel.Models.Article>>
+
+<h2>Group</h2>
+@foreach (var group in Model)
+{
+  <dt>@group.Key</dt>
+  <dd>
+    @foreach (var article in group)
+    {
+      <p><a href="@article.Url">@article.Title</a></p>
+    }
+  </dd>
+}
+
+

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MvcModel.Models.Article>
+
+
+<h2>Sort</h2>
+
+<table class="table">
+  <tr>
+  <th>
+    @Html.ActionLink(
+      Html.DisplayNameFor(model => model.Title).ToString(),
+      "Sort", new { sort = ViewBag.Title })
+  </th>
+  <th>
+    @Html.ActionLink(
+      Html.DisplayNameFor(model => model.Category).ToString(),
+      "Sort", new { sort = ViewBag.Category })
+  </th>
+  <th>
+    @Html.ActionLink(
+      Html.DisplayNameFor(model => model.Published).ToString(),
+      "Sort", new { sort = ViewBag.Published })
+  </th>
+  <th>
+    @Html.ActionLink(
+      Html.DisplayNameFor(model => model.Viewcount).ToString(),
+      "Sort", new { sort = ViewBag.Viewcount })
+  </th>
+  </tr>
+  @foreach (var item in Model)
+  {
+  <tr>
+    <td>
+      @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.Category)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.Published)
+    </td>
+    <td>
+      @Html.DisplayFor(modelItem => item.Viewcount)
+    </td>
+  </tr>
+  }
+</table>
